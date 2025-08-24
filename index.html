@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 30px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .filter-section {
+      margin-bottom: 15px;
+      text-align: right;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      background: #f9f9f9;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .delete-btn {
+      background: crimson;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .delete-btn:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Management</h1>
+
+    <!-- Add Student Form -->
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Enter name" required>
+      <input type="number" id="age" placeholder="Enter age" required>
+      <select id="grade" required>
+        <option value="">Select grade</option>
+        <option value="A">Grade A</option>
+        <option value="B">Grade B</option>
+        <option value="C">Grade C</option>
+      </select>
+      <button id ="sbtn" type="submit">Add Student</button>
+    </form>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <label for="filter">Filter by Grade:</label>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="A">Grade A</option>
+        <option value="B">Grade B</option>
+        <option value="C">Grade C</option>
+      </select>
+    </div>
+
+    <!-- Student List -->
+    <ul id="studentList">
+      <!-- Students will appear here dynamically -->
+      
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
