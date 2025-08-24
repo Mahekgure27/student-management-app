@@ -1,4 +1,4 @@
-🎓 Student Management App
+<h1>🎓 Student Management App</h1>
 
 A simple and interactive Student Management Application built using HTML, CSS, and JavaScript.
 This app allows users to add, view, filter, and delete student records in a clean and modern UI.
